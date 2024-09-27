@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  tomcat:
+    image: tomcat:8.5-jdk8  # 使用 Tomcat 8.5 和 JDK 1.8
+    container_name: my-tomcat
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./webapp:/usr/local/tomcat/webapps  # 部署后端项目 WAR 文件
+      - ./frontend/aiot-system:/usr/local/tomcat/webapps/aiot-system  # 部署 aiot-system 前端项目
+      - ./frontend/liuhao-system:/usr/local/tomcat/webapps/liuhao-system  # 部署 liuhao-system 前端项目
+      - ./frontend/ZXLDataScreen:/usr/local/tomcat/webapps/ZXLDataScreen  # 部署 ZXLDataScreen 前端项目
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    container_name: my-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456  # root 用户密码
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql  # 数据持久化
+      - ./sql-scripts:/docker-entrypoint-initdb.d/  # 导入 SQL 文件
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: my-phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - "8081:80"
+    depends_on:
+      - mysql

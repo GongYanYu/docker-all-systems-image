@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Implementation-Title: liuhao-back-system
+Implementation-Version: 1.0
+Built-By: yuge
+Spring-Boot-Layers-Index: WEB-INF/layers.idx
+Implementation-Vendor-Id: com.jq
+Spring-Boot-Version: 2.5.4
+Main-Class: org.springframework.boot.loader.WarLauncher
+Spring-Boot-Classpath-Index: WEB-INF/classpath.idx
+Start-Class: com.demo.App
+Spring-Boot-Classes: WEB-INF/classes/
+Spring-Boot-Lib: WEB-INF/lib/
+Created-By: Apache Maven 3.8.1
+Build-Jdk: 1.8.0_91
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/liuhao-back-system
+

@@ -1,0 +1,18 @@
+<datasources>
+
+
+    <datasource id="aiot_mysql">
+        <url>jdbc:mysql://mysql:3306/aiot_back_system?useSSL=false&amp;characterEncoding=UTF-8&amp;serverTimezone=GMT%2B8&amp;allowPublicKeyRetrieval=true</url>
+        <username>root</username>
+        <password>123456</password>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+    </datasource>
+
+<!--    <datasource id="log_mysql">-->
+<!--        <url>jdbc:mysql://localhost:3306/dbapi_log?useSSL=false&amp;characterEncoding=UTF-8&amp;serverTimezone=GMT%2B8</url>-->
+<!--        <username>root</username>-->
+<!--        <password>123456</password>-->
+<!--        <driver>com.mysql.cj.jdbc.Driver</driver>-->
+<!--    </datasource>-->
+
+</datasources>

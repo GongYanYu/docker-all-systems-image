@@ -1,0 +1,21 @@
+<sqls>
+    <defaultDB>aiot_mysql</defaultDB>
+
+    <sql id="getAbnormalInfo">
+        select * from abnormal_info
+        <where>
+            <if test="nodeType != null and nodeType != '' ">
+               and nodeType = #{nodeType}
+            </if>
+            <if test="process != null and process != ''">
+                and process = #{process}
+            </if>
+        </where>
+    </sql>
+
+    <sql id="securityWarningTrends">
+        select * from warning_trends
+    </sql>
+
+
+</sqls>

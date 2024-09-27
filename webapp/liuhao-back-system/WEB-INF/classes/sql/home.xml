@@ -1,0 +1,7 @@
+<sqls>
+    <defaultDB>lh_mysql</defaultDB>
+
+    <sql id="getHotWord">
+        select * from hot_word_list
+    </sql>
+</sqls>

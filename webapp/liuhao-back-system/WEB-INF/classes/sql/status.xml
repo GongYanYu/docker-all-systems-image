@@ -1,0 +1,19 @@
+<sqls>
+    <defaultDB>lh_mysql</defaultDB>
+
+    <sql id="getStatus">
+        select * from status
+
+        <where>
+            <if test="groupName != null and groupName != '' ">
+                and groupName = #{group}
+            </if>
+        </where>
+    </sql>
+
+
+    <sql id="updateStatus">
+        update status set value=#{value} where id=#{id}
+    </sql>
+
+</sqls>

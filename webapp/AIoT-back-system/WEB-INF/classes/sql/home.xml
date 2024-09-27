@@ -1,0 +1,16 @@
+<sqls>
+    <defaultDB>aiot_mysql</defaultDB>
+
+
+    <sql id="getAIoTInfo">
+        select * from aiot
+    </sql>
+
+    <sql id="getNodeList">
+        select * from node_list
+    </sql>
+
+    <sql id="getEdgeList">
+        select * from edge_list
+    </sql>
+</sqls>

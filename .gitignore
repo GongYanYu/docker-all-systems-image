@@ -1,0 +1,7 @@
+image/docker-all-systems-image.tar
+mysql-data/mysql.sock
+mysql-data/ib_buffer_pool
+mysql-data/binlog.index
+image/mysql-data/mysql.sock
+image/mysql-data/ib_buffer_pool
+image/mysql-data/binlog.index

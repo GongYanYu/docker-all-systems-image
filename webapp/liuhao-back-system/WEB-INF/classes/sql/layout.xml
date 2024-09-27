@@ -1,0 +1,31 @@
+<sqls>
+    <defaultDB>lh_mysql</defaultDB>
+
+
+    <sql id="getRelationshipInfo">
+        select * from relationship_list
+        <where>
+            <if test="associatedId != null and associatedId != '' ">
+                and associatedId = #{associatedId}
+            </if>
+        </where>
+    </sql>
+
+    <sql id="getHotInfo">
+        select * from hot_list
+        <where>
+            <if test="associatedId != null and associatedId != '' ">
+                and associatedId = #{associatedId}
+            </if>
+        </where>
+    </sql>
+
+    <sql id="getTraceInfo">
+        select * from trace_list
+        <where>
+            <if test="studentId != null and studentId != '' ">
+                and studentId = #{studentId}
+            </if>
+        </where>
+    </sql>
+</sqls>
