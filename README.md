@@ -1,2 +1,22 @@
 # docker-all-systems-image
 docker项目 用于一键启动项目
+# 1.构建自定义镜像
+在你的项目根目录下，运行以下命令来构建镜像：
+
+docker load -i docker-all-systems-image.tar
+
+
+# 2.运行容器
+
+docker-compose up -d
+
+# 3. 访问
+
+访问服务：
+
+- 后端服务：访问 http://localhost:8080/AIoT-back-system 和 http://localhost:8080/liuhao-back-system。
+- 前端服务：
+ - http://localhost:8080/aiot-system
+ - http://localhost:8080/liuhao-system
+ - http://localhost:8080/ZXLDataScreen
+- phpMyAdmin：通过 http://localhost:8081 管理 MySQL 数据库。
